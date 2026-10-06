@@ -10,3 +10,11 @@ app.use(
         extended: true,
     })
 )
+
+const pool = new pg.Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'mahasiswa',
+    password: 'Rachel18',
+    port: 5432, 
+})
