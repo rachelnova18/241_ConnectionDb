@@ -2,7 +2,7 @@ import express from 'express'
 import pg from 'pg'
 const app = express()
 const port = 3000
-const pool = pg
+//const pool = pg
 
 app.use(express.json())
 app.use(
@@ -29,4 +29,8 @@ app.get('/', (req, res, next) => {
         console.error(err);
         res.status(500).send('Internal Server Error');
     });
+})
+
+app.listen(port, () => {
+    console.log(`app running on port ${port}`);
 })
